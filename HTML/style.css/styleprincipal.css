@@ -1,0 +1,382 @@
+body {
+    background-color: rgb(50, 50, 51);
+}
+/* Inicio para el boton */
+      #intro-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        inset: 0;
+        background-image: url('https://i.pinimg.com/736x/35/80/70/358070b7f7a3857e5cbe7daeab0eca86.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      #intro-screen::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+      }
+        .intro-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        padding: 2rem;
+        max-width: 90%;
+      }
+      .intro-logo {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 1.5rem;
+        background: transparent;
+
+        .intro-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+      }
+      .intro-title {
+        font-size: 150px;
+        margin: 0.5rem 0 1rem;
+        background: linear-gradient(90deg, #000000, #0f0f0e, #272728);
+        letter-spacing: 1px;
+      }
+      .intro-slogan {
+        font-size: 1.45rem;
+        color: #9ca3af;
+        margin: 1.5rem 0 3.5rem;
+        line-height: 1.4;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        .intro-btn {
+            padding: 1.1rem;
+            font-size: 1.35rem;
+            font-weight: 600;
+            background: #415a77;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.35s aese;
+            box-shadow: 0 8px rgba(65, 90, 119, 0.45);
+        }
+        .intro-btn:hover {
+            background: #778da9;
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(119, 141, 169, 0.6);
+        }
+        #main-page {
+            display: none;
+        }
+        #main-page {
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+        #main-page[style*="block"]{
+            opacity: 1;
+        }
+
+
+
+
+
+
+
+      /*titulo */
+        .Titulo {
+            display: flex; 
+            font-family: Georgia; 
+            justify-content: center; 
+            color: white; 
+            font-size: 50px;   
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            gap: 50px;
+            justify-content: center;
+            margin-top: 20px;
+            font-family: 'Franklin Gothic Medium';
+            font-size: 25px;
+            
+        }
+
+        .box {
+            height: 400px;
+            background: #f1f5f9;
+            border-radius: 25px;
+            text-decoration: none;
+            color: rgb(23, 23, 22);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0. 15);
+        }
+
+        .box img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+
+        .box p {
+            text-align: center;
+            margin: auto;
+            font-weight: bold;
+        }
+
+.botones-flotantes {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-flotante {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.btn-flotante:hover {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE - hace que se vea bien en celular */
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Contenedor principal (centra y limita ancho) */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* La pantalla de bienvenida (intro) */
+#intro-screen {
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.intro-title {
+  font-size: 3rem;  /* tamaño base */
+  margin: 10px 0;
+  text-align: center;
+}
+
+.intro-slogan {
+  font-size: 1.4rem;
+  margin: 20px 0 40px;
+  text-align: center;
+}
+
+.intro-btn {
+  padding: 15px 40px;
+  font-size: 1.3rem;
+}
+
+/* Las columnas (grid) */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.box {
+  flex: 1 1 280px;
+  min-width: 280px;
+  max-width: 350px;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.box img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.box p {
+  padding: 10px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* En celular (menos de 768px): todo vertical y más pequeño */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .intro-title {
+    font-size: 2.2rem !important;
+  }
+
+  .intro-slogan {
+    font-size: 1.1rem !important;
+  }
+
+  .intro-btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    flex: 1 1 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .box img {
+    height: 180px;  /* imágenes más pequeñas en celular */
+  }
+}
+/* ============================================= */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* columnas automáticas */
+  gap: 20px;                  /* espacio entre tarjetas */
+  justify-items: center;      /* centra las tarjetas */
+  margin: 30px 0;
+}
+
+.box {
+  width: 100%;
+  max-width: 350px;           /* máximo ancho de cada tarjeta en PC */
+  background: #e9eaeb; /*se lo cambie estaba en gris*/
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.box img {
+  width: 100%;
+  height: 220px;              /* altura fija para uniformidad */
+  object-fit: cover;          /* la foto se ajusta sin distorsionarse */
+  object-position: center;
+}
+
+.box p {
+  padding: 12px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* En celulares y tabletas pequeñas: 1 columna (vertical) */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;   /* solo 1 columna */
+    gap: 25px;
+  }
+
+  .box {
+    max-width: 100%;
+  }
+
+  .box img {
+    height: 200px;              /* un poquito más pequeño en móvil */
+  }
+
+  .intro-title {
+    font-size: 1.4rem;
+  }
+
+  .intro-slogan {
+    font-size: 1.2rem;
+  }
+
+  .intro-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px;
+  }
+}
+
+/* En tabletas y celulares grandes: 2 columnas */
+@media (min-width: 769px) and (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columnas */
+  }
+}
+
+/* En computadoras normales: 3-4 columnas */
+@media (min-width: 993px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

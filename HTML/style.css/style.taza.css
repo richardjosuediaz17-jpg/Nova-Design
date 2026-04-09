@@ -1,0 +1,157 @@
+
+.botones-flotantes {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-flotante {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.btn-flotante:hover {
+    transform: scale(1.1);
+}
+
+    .button {
+        background-color: black;
+        margin-top: 15px;
+        border-radius: 15px;
+    }
+
+
+    body{
+        background: black;
+    }
+     
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 300px);
+            gap: 50px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .box {
+            height: 400px;
+            background: #f1f5f9;
+            border-radius: 25px;
+            text-decoration: none;
+            color: rgb(23, 23, 22);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .box:hover {
+            transform: scale(1.07);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0. 15);
+        }
+
+        .box img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+
+        .box p {
+            text-align: center;
+            margin: auto;
+            font-weight: bold;
+        }
+
+/* Fuerza viewport y base */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+.productos {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 columnas SIEMPRE en móvil y arriba */
+    gap: 15px !important;
+    padding: 15px !important;
+    margin: 20px auto !important;
+    max-width: 1000px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.card {
+    width: 100% !important; /* Ocupa su columna */
+    background: #001f3f !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3) !important;
+    text-align: center !important;
+}
+
+.card a {
+    display: block !important;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 10px !important;
+}
+
+.box {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+.card p {
+    margin: 10px 0 !important;
+    font-size: 1.2rem !important;
+}
+
+.card p:last-child {
+    color: #ff4500 !important;
+    font-weight: bold !important;
+    font-size: 1.4rem !important;
+}
+
+/* Solo baja a 1 columna en celulares MUY angostos (ej. <380px) */
+@media (max-width: 380px) {
+    .productos {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* En desktop/tablet: más columnas para que se vea lleno */
+@media (min-width: 768px) {
+    .productos {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .productos {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 25px !important;
+    }
+}

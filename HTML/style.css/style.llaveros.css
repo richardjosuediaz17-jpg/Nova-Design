@@ -1,0 +1,72 @@
+/* Fuerza viewport y base */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+.productos {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 columnas SIEMPRE en móvil y arriba */
+    gap: 15px !important;
+    padding: 15px !important;
+    margin: 20px auto !important;
+    max-width: 1000px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.card {
+    width: 100% !important; /* Ocupa su columna */
+    background: #001f3f !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3) !important;
+    text-align: center !important;
+}
+
+.card a {
+    display: block !important;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 10px !important;
+}
+
+.box {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+.card p {
+    margin: 10px 0 !important;
+    font-size: 1.2rem !important;
+}
+
+.card p:last-child {
+    color: #ff4500 !important;
+    font-weight: bold !important;
+    font-size: 1.4rem !important;
+}
+
+/* Solo baja a 1 columna en celulares MUY angostos (ej. <380px) */
+@media (max-width: 380px) {
+    .productos {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* En desktop/tablet: más columnas para que se vea lleno */
+@media (min-width: 768px) {
+    .productos {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .productos {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 25px !important;
+    }
+}
