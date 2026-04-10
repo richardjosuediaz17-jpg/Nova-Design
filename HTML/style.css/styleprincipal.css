@@ -380,3 +380,202 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    position: relative;           /* Muy importante */
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+  box-shadow: 0 10px 30px rgb(215, 52, 52);
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.box p {
+    text-align: center;
+    padding: 12px;
+    margin: 0;
+    background: #f8f8f8;
+    font-weight: bold;
+}
+
+/* ==================== ESTILO DE BLOQUEO ==================== */
+.box.bloqueada {
+    cursor: not-allowed;
+}
+
+.box.bloqueada img {
+    filter: brightness(0.65) grayscale(0.3);   /* Hace que se vea "desactivada" */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.mensaje {
+    padding: 15px;
+}
+
+.mensaje strong {
+    font-size: 1.1em;
+    color: #ffeb3b;
+}
+
+/* ==================== BOTÓN FLOTANTE ==================== */
+.boton-flotante {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 10000;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.boton-flotante:hover {
+  transform: scale(1.08);
+  background-color: #20b95c;
+}
+
+/* ==================== MODAL ==================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: rgb(19, 17, 17);
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgb(215, 52, 52);
+  text-align: left;
+  font-family: Georgia;
+}
+
+.modal h2 {
+  text-align: center;
+  margin: 0 0 25px 0;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #ede7e7;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: #e74c3c;
+  font-family: Impact;
+  font-size: 14px;
+  margin-top: 4px;
+  display: none;
+}
+
+.botones {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn-enviar, .btn-salir {
+  flex: 1;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-enviar {
+  background-color: #25D366;
+  color: white;
+}
+
+.btn-enviar:hover {
+  background-color: #20b95c;
+}
+
+.btn-salir {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.btn-salir:hover {
+  background-color: #ccc;
+}
+
+.mensaje-gracias {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  color: #25D366;
+  font-weight: bold;
+  padding: 20px 0;
+}
