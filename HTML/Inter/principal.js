@@ -6,7 +6,7 @@ function bloquearAcceso(event) {
 
 
 
-// Esperar a que la página cargue completamente
+
 document.addEventListener('DOMContentLoaded', function() {
 
     // Seleccionar elementos
@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('formRegistro');
     const mensajeGracias = document.getElementById('mensajeGracias');
 
-    // Verificar si los elementos existen
+    
     if (!btnEnviar) {
-        console.error("❌ No se encontró el botón Enviar. Revisa los IDs.");
+        console.error(" No se encontró el botón Enviar. Revisa los IDs.");
         return;
     }
 
-    console.log("✅ Script cargado correctamente");
+    console.log(" Script cargado correctamente");
 
     // Abrir modal
     if (btnAbrir) {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (esValido) {
-            console.log("✅ Datos válidos - Mostrando mensaje de gracias");
+            console.log(" Datos válidos - Mostrando mensaje de gracias");
             
             form.style.display = 'none';
             mensajeGracias.style.display = 'block';
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log("Modal cerrado automáticamente");
             }, 3000);
         } else {
-            console.log("❌ Validación falló");
+            console.log(" Validación falló");
         }
     });
 

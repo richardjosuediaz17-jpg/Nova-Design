@@ -134,6 +134,7 @@ html, body {
     font-weight: bold !important;
     font-size: 1.4rem !important;
 }
+    
 
 /* Solo baja a 1 columna en celulares MUY angostos (ej. <380px) */
 @media (max-width: 380px) {

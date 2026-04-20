@@ -53,6 +53,7 @@ body {
         margin: 0.5rem 0 1rem;
         background: linear-gradient(90deg, #000000, #0f0f0e, #272728);
         letter-spacing: 1px;
+        justify-content: center;
       }
       .intro-slogan {
         font-size: 1.45rem;
